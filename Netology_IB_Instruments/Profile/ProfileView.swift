@@ -23,10 +23,9 @@ class ProfileView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
     }
     
-    private func commonInit() {
+    public func commonInit() {
         let xibView = Bundle.main.loadNibNamed("ProfileView", owner: self, options: nil)!.first as! UIView
         addSubview(mainView)
         xibView.frame = self.bounds
